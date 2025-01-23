@@ -1,18 +1,18 @@
 while True:    
     produto = input("Digite o nome do produto: ")
-    preco = input("Digite o preço do produto: ")
-    quant = input("Digite a quantidade do produto: ")
-    total = float(preco) * float(quant)
+    preco = float(input("Digite o preço do produto: "))
+    quant = int(input("Digite a quantidade do produto: "))
+    total = preco * quant
 
     percent = 1
 
-    if float(quant) >= 11 and float(quant) <= 20:
+    if 11 <= quant <= 20:
         percent = percent - 0.10
     else:
-        if float(quant) >= 21 and float(quant) <= 50:
+        if 21 <= quant <= 50:
             percent = percent - 0.20
         else:
-            if float(quant) > 50:
+            if quant > 50:
                 percent = percent - 0.25
         
     total = total * percent
