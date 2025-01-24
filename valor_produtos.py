@@ -1,5 +1,3 @@
-import json
-
 json_ret = [
     { "id": 1, "nome": "Arroz", "quantidade": 50, "preco": 20.99 }, 
     { "id": 2, "nome": "Feijão", "quantidade": 30, "preco": 8.50 }, 
