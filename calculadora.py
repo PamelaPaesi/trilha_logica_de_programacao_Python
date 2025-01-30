@@ -1,21 +1,21 @@
-def validaOpcao(posicao):
+def validaopcao(posicao):
     while True:
         try:
             return float(input('Insira o ' + posicao + ' número: '))
         except ValueError:
             print("Valor inválido!")
 
-def primeiroNro(UltNro):
+def primeironro(ultnro):
     while True:
-        if UltNro > 0: 
-            sair = input("Deseja manter o último resultado ("+str(UltNro)+")? 0 - Sim, 1 - Não : ")
+        if ultnro > 0: 
+            sair = input("Deseja manter o último resultado ("+str(ultnro)+")? 0 - Sim, 1 - Não : ")
         else:
             sair = "1"
         match sair:
             case "0": # Sim
-                return UltNro
+                return ultnro
             case "1": # Não
-                nro = validaOpcao("primeiro")
+                nro = validaopcao("primeiro")
                 return nro
             case _:
                 print("Operação inválida!")
@@ -24,8 +24,8 @@ def primeiroNro(UltNro):
                 if sair == "0":
                     break
 
-def segundoNro():
-    nro = validaOpcao("segundo")
+def segundonro():
+    nro = validaopcao("segundo")
     return nro
 
 result = 0
@@ -37,13 +37,19 @@ while True:
     operacao = input('Escolha uma das operações acima:  ')
     match operacao:
         case "1": # Somar
-            result = primeiroNro(result) + segundoNro()
+            result = primeironro(result) + segundonro()
         case "2": # Subtrair
-            result = primeiroNro(result) - segundoNro()
+            result = primeironro(result) - segundonro()
         case "3": # Multiplicar
-            result = primeiroNro(result) * segundoNro()
+            result = primeironro(result) * segundonro()
         case "4": # Dividir
-            result = primeiroNro(result) / segundoNro()
+            n1 = primeironro(result) 
+            n2 = segundonro()
+            if(n1 == 0 or n2 == 0):
+                print("Divisão por 0 não é permitida")
+                result = 0
+            else:
+                result = primeironro(result) / segundonro()
         case _:
             print("Operação inválida!")
             print("---------------------")
