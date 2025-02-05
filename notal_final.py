@@ -7,9 +7,9 @@ while True:
 
     print("Media: " +  "{:.2f}".format(media))
 
-    if (media >= 7):
+    if media >= 7:
         print('Aprovado')
-    elif (media >= 5):
+    elif media >= 5:
         print('Recuperação')
     else:
         print('Reprovado')
