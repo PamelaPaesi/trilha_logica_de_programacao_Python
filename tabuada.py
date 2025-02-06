@@ -1,4 +1,4 @@
-def calculaTabuada(tabuada):
+def calculatabuada(tabuada):
     for i in range(11):
         if i > 0:
             print(str(tabuada) + " x " + str(i) + " = " + str(tabuada*i))  
@@ -9,7 +9,7 @@ while True:
     try:
         tabuada = int(input('Escolha a Tabuada a ser calculada: '))
         if tabuada in tabuadas:
-            calculaTabuada(tabuada)
+            calculatabuada(tabuada)
             break
         else:
             print("Valor inválido!")
