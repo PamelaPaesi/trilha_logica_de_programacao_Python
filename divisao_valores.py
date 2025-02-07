@@ -14,5 +14,5 @@ while True:
         break
     
 
-remainder = x % y
+remainder = x / y
 print(remainder)
